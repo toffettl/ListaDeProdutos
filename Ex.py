@@ -13,7 +13,8 @@ novos_produtos = [
     {**p, 'preco': round(p['preco'] * 1.1, 2)}
     for p in copy.deepcopy(produtos)
 ]
-
+#lambda p: p['nome']: Para cada produto p, a função lambda vai
+# retornar o valor de p['nome'], que é o nome do produto, e esse valor será utilizado para ordenar a lista.
 produtos_ordenados_por_nome = sorted(
     copy.deepcopy(produtos),
     key=lambda p: p['nome'],
